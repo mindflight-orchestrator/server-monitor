@@ -2,6 +2,8 @@
 
 Rust CLI that monitors ClosLamartine Docker containers (prod + staging) on the Ubuntu server and sends Telegram alerts on failures.
 
+Clone: `git clone https://github.com/mindflight-orchestrator/server-monitor.git`, then from the repo root run `cargo build --release`.
+
 ## Quick start: Telegram bot setup
 
 ```bash
