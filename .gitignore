@@ -5,7 +5,6 @@
 # Secrets and local env (keep env.kylit.example)
 .env
 .env.*
-!.env.example
 
 # OS
 .DS_Store
