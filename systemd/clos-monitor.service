@@ -1,0 +1,18 @@
+[Unit]
+Description=ClosLamartine Docker Monitor
+After=docker.service network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+SupplementaryGroups=docker
+ExecStart=/usr/local/bin/clos-monitor run
+# Env file: create with TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID.
+# Binary loads from: MONITOR_ENV_FILE, /etc/clos-monitor.env, or .env (first existing)
+EnvironmentFile=-/etc/clos-monitor.env
+Environment=MONITOR_INTERVAL_SECS=300
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target

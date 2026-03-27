@@ -1,0 +1,19 @@
+# Cargo
+/target/
+**/*.rs.bk
+
+# Secrets and local env (keep env.kylit.example)
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE (uncomment if you prefer not to ignore)
+# .idea/
+# .vscode/
+
+# Logs / misc
+*.log
